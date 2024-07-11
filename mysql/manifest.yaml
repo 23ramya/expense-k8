@@ -2,29 +2,26 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: mysql
-  namespace: expense
-  
   # these labels are deployment related labels
   labels:
     component: mysql
-    project: expense
+    project: expense 
     tier: db
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       component: mysql
-      project: expense
+      project: expense 
       tier: db
   # pod definition
   template:
     metadata:
       labels:
         component: mysql
-        project: expense
+        project: expense 
         tier: db
     spec:
       containers:
-      - name: mysql
-        image: ramya/mysql:v1.0
-
+      - name: nginx
+        image: nginx
