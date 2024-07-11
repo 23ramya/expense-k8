@@ -40,5 +40,5 @@ spec:
     tier: db
   ports:
   - protocol: TCP
-    port: 443 #service-port
-    targetPort: 443 #target-port
+    port: 3306 #service-port
+    targetPort: 3306 #target-port
